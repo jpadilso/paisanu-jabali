@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Paisanu Jabalí</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="banner" role="img" aria-label="Paisaje asturiano en pixel art con un hórreo y un jabalí caminando">
+    <div class="camina"></div>
+  </div>
+  <button class="tema-btn" id="tema" aria-label="Cambiar entre modo día y noche"><img id="tema-ico" src="img/sol.png" alt=""></button>
+  <div class="titulo">
+    <h1>Paisanu<br>Jabalí</h1>
+    <p>Guía de bolsillo del jabalí asturiano</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ======================= INICIO ======================= -->
+<section class="pantalla" id="p-inicio" aria-labelledby="h-inicio">
+  <h2 id="h-inicio" class="quita">Inicio</h2>
+
+  <div class="card">
+    <div class="heroe">
+      <div class="retrato" role="img" aria-label="Retrato de un jabalí de frente, con los colmillos a la vista"></div>
+      <p>El <b>jabalí</b> (<i>Sus scrofa</i>) vive en los bosques, prados y hasta en las afueras de los pueblos asturianos. Aquí tienes su ficha, dónde se le gestiona, cómo suena y cómo convivir con él.</p>
+    </div>
+    <div class="dato" aria-live="polite">
+      <div class="dato-fila"><img src="img/bellota.png" alt=""><div id="dato-texto"></div></div>
+    </div>
+    <button class="btn" id="otro-dato">Otro dato</button>
+  </div>
+
+  <div class="tiles">
+    <div class="tile"><img src="img/colmillo.png" alt=""><b>13.666</b><small>jabalíes cazados en Asturias en la temporada 2024-25</small></div>
+    <div class="tile"><img src="img/huella.png" alt=""><b>120 d</b><small>de gestación, aprox.</small></div>
+    <div class="tile"><img src="img/otono.png" alt=""><b>SEP-DIC</b><small>celo principal (otoño)</small></div>
+    <div class="tile"><img src="img/corazon.png" alt=""><b>ENE-ABR</b><small>meses con más partos</small></div>
+  </div>
+
+  <div class="divisor" aria-hidden="true">
+    <img src="img/bellota.png" alt=""><img src="img/seta.png" alt=""><img src="img/castana.png" alt=""><img src="img/seta.png" alt=""><img src="img/bellota.png" alt="">
+  </div>
+
+  <h2><img src="img/libro.png" alt="">Fuentes y límites</h2>
+  <p class="lead">Consultadas el 27/10/2026. Todos los enlaces se abren en tu navegador.</p>
+  <div class="card">
+    <ul>
+      <li><a href="https://medioambiente.asturias.es/documents/646140/0/Resoluci%C3%B3n+de+14+de+Enero+de+2026.pdf/e1053789-fe66-b695-2395-f8d7404dd85a">Resolución de 14/01/2026 (Principado de Asturias)</a>: plan frente a la peste porcina africana; capturas 2024-25, zonas y medidas.</li>
+      <li><a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">Ficha de <i>Sus scrofa</i> (Universitat de València)</a>: descripción, dieta, vida social, reproducción.</li>
+      <li><a href="https://secem.es/sites/default/files/galemys/articles/Galemys-15-NE-2003-A14-Markina.pdf">Markina et al., <i>Galemys</i> 15 (2003)</a>: reproducción del jabalí en Álava (Cantábrico).</li>
+      <li><a href="https://mapa.gob.es/ministerio/pags/Biblioteca/Revistas/pdf%5FMG%2FMG%5F2007%5F198%5F28%5F30%2Epdf">Mundo Veterinario: Porcino (mayo 2007)</a>: biología del jabalí en Extremadura.</li>
+      <li><a href="https://www.eldebate.com/sociedad/sociedad-medio-ambiente/20240313/asturias-propone-continuar-caza-jabalies-reducir-sobrepoblacion_181301.html">El Debate, 13/03/2024</a>: planes del Principado y aumento en zonas bajas.</li>
+      <li><a href="https://www.agronewscastillayleon.com/ppa-cataluna-410-jabalies-74-focos-octubre-2026">AgroNews Castilla y León, 15/10/2026</a>: PPA en Cataluña (datos del MAPA).</li>
+      <li><a href="https://www.race.es/atropello-animales-carretera-como-evitarlos">RACE: atropellos de animales</a> y <a href="https://www.autofacil.es/responsabilidad-accidente-atropello-animales/">Autofácil: responsabilidad</a>.</li>
+    </ul>
+    <p class="fuente"><b>Lo que no he podido comprobar:</b> pesos y medidas de jabalíes asturianos (las cifras de tamaño son del Montseny); el calendario de caza 2026-27 (consulta la Disposición General de Vedas vigente en medioambiente.asturias.es); y la lista de concejos por zona, que sale de las tablas de la resolución y conviene contrastar con el PDF.</p>
+    <p class="fuente"><b>Hecho a mano:</b> los sonidos son recreaciones sintéticas, el mapa es esquemático (contorno y posiciones aproximadas) y las escenas son ilustraciones pixel art. El retrato es la foto que aportó el usuario.</p>
+  </div>
+</section>
+
+<!-- ======================= FICHA ======================= -->
+<section class="pantalla" id="p-ficha" aria-labelledby="h-ficha">
+  <h2 id="h-ficha"><img src="img/libro.png" alt="">Ficha</h2>
+  <p class="lead">Toca cada tarjeta para abrirla.</p>
+
+  <details class="card" open>
+    <summary><img src="img/colmillo.png" alt=""><h3>Quién es</h3></summary>
+    <div class="cuerpo">
+      <p>Mamífero omnívoro de cuerpo robusto, más alto por delante, con el cuello poco visible y las orejas pequeñas y erguidas. El dimorfismo es marcado: los machos son más corpulentos y tienen los colmillos más desarrollados.</p>
+      <p><b>Tamaño de referencia</b> (adultos del Montseny, Cataluña; no hay cifras asturianas en las fuentes que he consultado):</p>
+      <table>
+        <tr><th></th><th>Machos</th><th>Hembras</th></tr>
+        <tr><td>Cabeza-cuerpo</td><td class="num">133-148 cm</td><td class="num">118-137 cm</td></tr>
+        <tr><td>Peso</td><td class="num">60-118 kg</td><td class="num">40-65 kg</td></tr>
+        <tr><td>Colmillos</td><td class="num">17,5-24 cm</td><td class="num">13-20 cm</td></tr>
+      </table>
+      <p>Las crías (<b>rayones</b>) llevan pelaje pardo claro con líneas longitudinales oscuras hasta los 4-5 meses. Después son <b>bermejos</b> (pardo rojizo) y, entre los 10 y los 12 meses, estrenan el pelaje adulto pardo grisáceo.</p>
+      <p class="fuente">Fuente: <a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">Universitat de València</a>.</p>
+    </div>
+  </details>
+
+  <details class="card">
+    <summary><img src="img/bellota.png" alt=""><h3>Qué come</h3></summary>
+    <div class="cuerpo">
+      <p>Omnívoro con predominio vegetal: frutos de fagáceas (bellotas, hayucos), productos agrícolas, raíces y hongos. La parte animal es frecuente pero poco importante en cantidad: invertebrados, anfibios y micromamíferos.</p>
+      <p>Al buscar comida bajo tierra con el hocico deja <b>hozaduras</b>, que pueden afectar de forma importante a algunos ecosistemas y son uno de los rastros más fáciles de reconocer.</p>
+      <p class="fuente">Fuente: <a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">Universitat de València</a>.</p>
+    </div>
+  </details>
+
+  <details class="card">
+    <summary><img src="img/corazon.png" alt=""><h3>Celo y crías</h3></summary>
+    <div class="cuerpo">
+      <ul>
+        <li><b>Celo principal:</b> en otoño (septiembre-diciembre). En Álava, zona atlántica de transición, el máximo se situó a finales de septiembre.</li>
+        <li><b>Gestación:</b> unos 120 días (otros autores hablan de unos 115).</li>
+        <li><b>Partos:</b> mayoritarios entre enero y abril; en Álava se concentraron de noviembre a abril, con máximo en enero-febrero, aunque hubo nacimientos todo el año.</li>
+        <li><b>Camada:</b> mediana de 3-4 crías. En Álava, 3,86 fetos por hembra de media, hasta 5 en hembras de 40-85 kg.</li>
+        <li><b>Precoces:</b> las hembras pueden quedar preñadas en su primer o segundo año, a partir de unos 30 kg. Las crías maman 3-4 meses.</li>
+        <li><b>Mortalidad:</b> los autores del estudio alavés estiman un 30,8 % en el primer año de vida.</li>
+      </ul>
+      <p class="fuente">Fuentes: <a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">U. de València</a>; <a href="https://secem.es/sites/default/files/galemys/articles/Galemys-15-NE-2003-A14-Markina.pdf">Markina et al. (2003)</a>; <a href="https://mapa.gob.es/ministerio/pags/Biblioteca/Revistas/pdf%5FMG%2FMG%5F2007%5F198%5F28%5F30%2Epdf">Mundo Veterinario (2007)</a>.</p>
+    </div>
+  </details>
+
+  <details class="card">
+    <summary><img src="img/huella.png" alt=""><h3>Vida social y rutina</h3></summary>
+    <div class="cuerpo">
+      <ul>
+        <li>La unidad básica es el <b>grupo matriarcal</b>: una o varias hembras adultas con sus crías.</li>
+        <li>Los machos jóvenes forman otros núcleos y los machos adultos son solitarios; en el celo se unen temporalmente a los grupos de hembras.</li>
+        <li>Es sobre todo <b>crepuscular y nocturno</b>, aunque se deja ver de día donde hay poca perturbación humana.</li>
+        <li>Áreas de campeo anuales de 12.000-15.000 ha en machos y hasta 6.000 ha en hembras (datos de la ficha).</li>
+        <li>En Extremadura, los machos jóvenes abandonan el grupo al año y pueden desplazarse hasta 50 km.</li>
+        <li>Vive en bosques, marismas, cultivos y periferias urbanas; hay indicios de su presencia en pastos subalpinos por encima de 2.400 m.</li>
+      </ul>
+      <p class="fuente">Fuentes: <a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">U. de València</a>; <a href="https://mapa.gob.es/ministerio/pags/Biblioteca/Revistas/pdf%5FMG%2FMG%5F2007%5F198%5F28%5F30%2Epdf">Mundo Veterinario (2007)</a>.</p>
+    </div>
+  </details>
+
+  <details class="card">
+    <summary><img src="img/horreo.png" alt="" style="width:40px"><h3>En Asturias hoy</h3></summary>
+    <div class="cuerpo">
+      <p>El Principado divide el territorio en tres zonas según la densidad de jabalíes y las capturas de la temporada 2024-25:</p>
+      <table>
+        <tr><th>Zona</th><th>Superficie</th><th>Cazados</th><th>Objetivo</th></tr>
+        <tr><td>1 Central</td><td class="num">161.646,5 ha</td><td class="num">4.178</td><td>+20 % sobre la media de 3 años</td></tr>
+        <tr><td>2 Intermedia</td><td class="num">521.023 ha</td><td class="num">7.494</td><td>+10 %</td></tr>
+        <tr><td>3 Sur</td><td class="num">381.317 ha</td><td class="num">1.994</td><td>Mantener</td></tr>
+      </table>
+      <p>Densidad de capturas por 100 ha: 2,6 / 1,4 / 0,5. Total: <b>13.666</b> jabalíes. La zona central es la de mayor densidad y humanización.</p>
+      <p><b>Medidas</b> (vigentes hasta el final de la temporada 2026-27, revisables): más cupo en batidas, recechos y aguardos en las zonas 1 y 2; control en entornos urbanos con arco, aguardos de agentes medioambientales y, si procede, jaulas trampa; visores térmicos y comederos con cereal solo con autorización específica.</p>
+      <p>Un artículo de El Debate (2024) recoge la hipótesis de investigadores de que el aumento en las zonas bajas se debe a la presión de grandes carnívoros, sobre todo el lobo, en la montaña. Es una explicación citada, no un dato oficial.</p>
+      <p class="fuente">Fuentes: <a href="https://medioambiente.asturias.es/documents/646140/0/Resoluci%C3%B3n+de+14+de+Enero+de+2026.pdf/e1053789-fe66-b695-2395-f8d7404dd85a">Resolución 14/01/2026</a>; <a href="https://www.eldebate.com/sociedad/sociedad-medio-ambiente/20240313/asturias-propone-continuar-caza-jabalies-reducir-sobrepoblacion_181301.html">El Debate (2024)</a>.</p>
+    </div>
+  </details>
+
+  <details class="card">
+    <summary><img src="img/aviso.png" alt=""><h3>Peste porcina africana</h3></summary>
+    <div class="cuerpo">
+      <p>El plan asturiano nace del brote detectado en Cataluña en noviembre de 2025, que afecta a jabalíes.</p>
+      <ul>
+        <li>A 15/10/2026 (datos del MAPA citados por AgroNews): <b>410 jabalíes positivos</b> y <b>74 focos</b>, todos en Cataluña. Ningún caso en cerdos domésticos. Ese artículo no menciona casos en otras comunidades.</li>
+        <li>En Asturias, cualquier persona puede avisar al <b>112</b> si encuentra un jabalí muerto. Agentes del Medio Natural lo retiran, se toman muestras y se analizan por PCR.</li>
+        <li>Los jabalíes muertos en carretera los retira la administración titular de la vía.</li>
+      </ul>
+      <p class="fuente">Fuentes: <a href="https://medioambiente.asturias.es/documents/646140/0/Resoluci%C3%B3n+de+14+de+Enero+de+2026.pdf/e1053789-fe66-b695-2395-f8d7404dd85a">Resolución 14/01/2026</a>; <a href="https://www.agronewscastillayleon.com/ppa-cataluna-410-jabalies-74-focos-octubre-2026">AgroNews (15/10/2026)</a>. La situación cambia: comprueba el dato actual en el MAPA.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ======================= MAPA ======================= -->
+<section class="pantalla" id="p-mapa" aria-labelledby="h-mapa">
+  <h2 id="h-mapa"><img src="img/pin.png" alt="">Mapa</h2>
+  <p class="lead">Toca el mapa para verlo grande y moverlo con el dedo.</p>
+
+  <figure class="mapa-fig" id="mapa-fig" role="button" tabindex="0" aria-label="Ampliar el mapa de Asturias">
+    <img src="img/mapa-asturias.png" alt="Mapa esquemático de Asturias con ejemplos de concejos marcados según la zona del plan de jabalí">
+    <figcaption>Mapa esquemático de Asturias. Contorno y posiciones aproximadas.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Zonas del plan</h3>
+    <ul class="leyenda">
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="#d63430" stroke="#2b2118" stroke-width="3"/></svg><div><b>Zona 1 · Central</b><br>Mayor densidad y humanización. 2,6 jabalíes cazados por 100 ha.</div></li>
+      <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="#f4a028" stroke="#2b2118" stroke-width="3"/></svg><div><b>Zona 2 · Intermedia</b><br>Densidad media. 1,4 por 100 ha.</div></li>
+      <li><svg viewBox="0 0 24 24"><polygon points="12,3 21,20 3,20" fill="#965ac8" stroke="#2b2118" stroke-width="3" stroke-linejoin="miter"/></svg><div><b>Zona 3 · Sur</b><br>Densidad baja. 0,5 por 100 ha.</div></li>
+    </ul>
+    <p>Cada símbolo es un <b>ejemplo</b> de concejo incluido en esa zona, no el límite de la zona: la resolución define cada zona como suma de terrenos cinegéticos y algunos concejos tienen terrenos en dos zonas.</p>
+    <p class="fuente">Fuente: <a href="https://medioambiente.asturias.es/documents/646140/0/Resoluci%C3%B3n+de+14+de+Enero+de+2026.pdf/e1053789-fe66-b695-2395-f8d7404dd85a">Resolución de 14/01/2026</a>.</p>
+  </div>
+
+  <details class="card">
+    <summary><img src="img/libro.png" alt=""><h3>Concejos por zona</h3></summary>
+    <div class="cuerpo">
+      <p><b>Zona 1:</b></p>
+      <p class="concejos">Avilés, Candamo, Cabranes, Carreño, Castrillón, Corvera, Gijón, Gozón, Grado, Illas, Llanera, Las Regueras, Morcín, Muros de Nalón, Noreña, Oviedo, Pravia, Ribera de Arriba, Riosa, Santo Adriano, Sariego, Siero, Soto del Barco, Villaviciosa.</p>
+      <p><b>Zona 2:</b></p>
+      <p class="concejos">Aller, Belmonte, Boal, Bimenes, Cabrales, Caravia, Cangas de Onís, Castropol, Colunga, Coaña, Cudillero, El Franco, Grado, Langreo, Laviana, Lena, Llanes, Mieres, Nava, Navia, Oviedo, Onís, Parres, Peñamellera Alta, Peñamellera Baja, Piloña, Pravia, Proaza, Quirós, Ribadedeva, Ribadesella, Salas, San Martín del Rey Aurelio, San Tirso de Abres, Sueve, Tapia de Casariego, Taramundi, Tineo, Valdés, Vegadeo, Villayón, Villaviciosa, Yernes y Tameza.</p>
+      <p><b>Zona 3:</b></p>
+      <p class="concejos">Allande, Amieva, Aller, Belmonte, Caso, Cabrales, Cangas de Onís, Cangas del Narcea, Degaña, Grandas de Salime, Ibias, Illano, Lena, Onís, Pesoz, Ponga, Quirós, Santa Eulalia, San Martín de Oscos, Somiedo, Sobrescobio, Teverga, Vegadeo, Villanueva de Oscos.</p>
+      <p class="fuente">Lista extraída de las tablas de la resolución con lectura automática: contrástala con el PDF antes de usarla para algo importante.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ======================= SONIDOS ======================= -->
+<section class="pantalla" id="p-sonidos" aria-labelledby="h-sonidos">
+  <h2 id="h-sonidos"><img src="img/altavoz.png" alt="">Sonidos</h2>
+  <p class="lead">Sube el volumen del móvil y toca para escuchar.</p>
+
+  <div class="aviso">
+    <img src="img/aviso.png" alt="">
+    <p><b>Son recreaciones sintéticas</b> hechas por ordenador a partir de descripciones generales del comportamiento. No son grabaciones de jabalíes reales y no están contrastadas con ellas.</p>
+  </div>
+
+  <div class="card" data-audio="audio/amenaza.ogg">
+    <div class="sonido">
+      <img src="img/colmillo.png" alt="">
+      <div class="sonido-cuerpo">
+        <h3>Amenaza</h3>
+        <p>Bufidos, castañeteo de colmillos y un gruñido grave: el aviso de «no te acerques».</p>
+      </div>
+    </div>
+    <div class="reproductor">
+      <button class="btn" data-play>Escuchar</button>
+      <div class="barra"><i></i></div>
+      <div class="eq" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+
+  <div class="card" data-audio="audio/celo.ogg">
+    <div class="sonido">
+      <img src="img/corazon.png" alt="">
+      <div class="sonido-cuerpo">
+        <h3>Celo</h3>
+        <p>Recreación de gruñidos rítmicos de un macho en celo, con chasquidos de mandíbula.</p>
+      </div>
+    </div>
+    <div class="reproductor">
+      <button class="btn" data-play>Escuchar</button>
+      <div class="barra"><i></i></div>
+      <div class="eq" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+
+  <div class="card" data-audio="audio/piara.ogg">
+    <div class="sonido">
+      <img src="img/huella.png" alt="">
+      <div class="sonido-cuerpo">
+        <h3>Piara tranquila</h3>
+        <p>Gruñidos suaves de contacto entre una hembra y sus rayones, para comparar con los anteriores.</p>
+      </div>
+    </div>
+    <div class="reproductor">
+      <button class="btn" data-play>Escuchar</button>
+      <div class="barra"><i></i></div>
+      <div class="eq" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+
+  <p class="lead" style="margin:16px 4px">¿Tienes grabaciones reales? Copia los archivos a <code>assets/www/audio/</code> con los mismos nombres (<code>amenaza.ogg</code>, <code>celo.ogg</code>, <code>piara.ogg</code>) y los sustituirán.</p>
+</section>
+
+<!-- ======================= CONVIVIR ======================= -->
+<section class="pantalla" id="p-convivir" aria-labelledby="h-convivir">
+  <h2 id="h-convivir"><img src="img/escudo.png" alt="">Convivir</h2>
+  <p class="lead">Lo importante para no llevarse sustos.</p>
+
+  <div class="card">
+    <h3>Si te cruzas con uno</h3>
+    <ul>
+      <li>Mantén la distancia. No te acerques ni intentes la foto de cerca.</li>
+      <li>No le des comida.</li>
+      <li>Si hay una hembra con rayones, no te interpongas: los grupos son hembras con sus crías.</li>
+      <li>Déjale una salida libre y retrocede despacio, sin correr.</li>
+      <li>Ten a tu perro atado. Al anochecer y de madrugada hay más actividad.</li>
+    </ul>
+    <p class="fuente">Consejos de sentido común sobre fauna salvaje; <b>no proceden de una guía oficial del Principado</b>. La rutina crepuscular y nocturna y la vida en grupos matriarcales sí vienen de la <a href="https://www.uv.es/zoobot/huellas/pdf/sus_scrofa.pdf">ficha de la Universitat de València</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>Al volante</h3>
+    <ul>
+      <li>Los jabalíes están detrás del <b>43 %</b> de los accidentes con animales en España (DGT, vía RACE); la mayoría, de noche y en fin de semana.</li>
+      <li>En Álava se registró un pico de atropellos a principios de otoño, ligado a la mayor movilidad del celo.</li>
+      <li>En tramos con señal de animales sueltos, reduce la velocidad y aumenta la distancia.</li>
+      <li>Si ves uno de noche, pasa de largas a cortas. No pites fuerte: puedes asustarlo; y pasa despacio, que puede haber más detrás.</li>
+    </ul>
+    <p><b>Si hay choque:</b> sujeta bien el volante y frena de forma controlada; señaliza con triángulos y chaleco; avisa al <b>112</b> si hay heridos y al <b>062</b> (Guardia Civil/Seprona) para que se ocupen del animal; deja constancia ante ellos.</p>
+    <p><b>Responsabilidad:</b> por regla general, el conductor. Puede recaer en el titular del coto si el choque se debe a una batida (durante ella o en las 12 horas siguientes) o en el titular de la vía si faltaba señalización o la valla estaba sin reparar. Revisa si tu póliza cubre animales cinegéticos. No es asesoramiento legal.</p>
+    <p class="fuente">Fuentes: <a href="https://www.race.es/atropello-animales-carretera-como-evitarlos">RACE</a>; <a href="https://www.autofacil.es/responsabilidad-accidente-atropello-animales/">Autofácil</a>; <a href="https://secem.es/sites/default/files/galemys/articles/Galemys-15-NE-2003-A14-Markina.pdf">Markina et al. (2003)</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>Si encuentras uno muerto</h3>
+    <ul>
+      <li>Avisa al <b>112</b>. El plan de vigilancia de la peste porcina africana depende de que se comuniquen los cadáveres.</li>
+      <li>Los agentes del Medio Natural lo retiran y lo llevan a la planta de COGERSA en Serín (Gijón); antes se toman muestras para analizarlas por PCR.</li>
+    </ul>
+    <p class="fuente">Fuente: <a href="https://medioambiente.asturias.es/documents/646140/0/Resoluci%C3%B3n+de+14+de+Enero+de+2026.pdf/e1053789-fe66-b695-2395-f8d7404dd85a">Resolución de 14/01/2026</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= FOTOS ======================= -->
+<section class="pantalla" id="p-fotos" aria-labelledby="h-fotos">
+  <h2 id="h-fotos"><img src="img/foto.png" alt="">Fotos</h2>
+  <p class="lead">Toca una imagen para verla grande.</p>
+  <div class="galeria" id="galeria"></div>
+  <div class="aviso">
+    <img src="img/foto.png" alt="">
+    <p>Para añadir tus fotos, copia las imágenes a <code>assets/www/fotos/</code> y apúntalas en <code>fotos.js</code> (hay un ejemplo en el propio archivo).</p>
+  </div>
+</section>
+
+<div class="suelo" aria-hidden="true"></div>
+<footer class="pie">Paisanu Jabalí · app local, sin conexión</footer>
+</main>
+
+<nav class="tabs" role="tablist" aria-label="Secciones">
+  <button class="tab" role="tab" data-ir="inicio"><img src="img/huella.png" alt=""><span>Inicio</span></button>
+  <button class="tab" role="tab" data-ir="ficha"><img src="img/libro.png" alt=""><span>Ficha</span></button>
+  <button class="tab" role="tab" data-ir="mapa"><img src="img/pin.png" alt=""><span>Mapa</span></button>
+  <button class="tab" role="tab" data-ir="sonidos"><img src="img/altavoz.png" alt=""><span>Sonidos</span></button>
+  <button class="tab" role="tab" data-ir="convivir"><img src="img/escudo.png" alt=""><span>Convivir</span></button>
+  <button class="tab" role="tab" data-ir="fotos"><img src="img/foto.png" alt=""><span>Fotos</span></button>
+</nav>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <div class="marco"><img id="visor-img" alt=""></div>
+  <p id="visor-pie"></p>
+  <button class="btn" id="visor-cerrar">Cerrar</button>
+</div>
+
+<script src="fotos/fotos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
